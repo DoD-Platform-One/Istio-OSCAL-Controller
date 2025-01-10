@@ -1,1 +1,15 @@
-{}
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "kubernetes": {
+    "fileMatch": ["chart/.+\\.yaml$"]
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "registryUrls": ["https://registry1.dso.mil"],
+      "matchPackagePatterns": ["ironbank/tetrate/oscal-controller"],
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: registry1.dso.mil/ironbank/tetrate/oscal-controller
+  tag: 0.0.2
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: private-registry
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 8080
+
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/port: "8080"
+
+exemptedNamespaces:
+  - istio-operator
+  - kube-system
+  - gmp-public
+  - gmp-system
+  - kube-public
+  - kube-node-lease
+  - flux-system
+
+args:
+  logOutputLevel: controller:debug
