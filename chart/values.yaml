@@ -3,7 +3,7 @@ fullnameOverride: ""
 
 image:
   repository: registry1.dso.mil/ironbank/tetrate/oscal-controller
-  tag: 0.0.2
+  tag: 0.0.3
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
