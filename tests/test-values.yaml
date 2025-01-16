@@ -1,0 +1,6 @@
+istio:
+  enabled: true
+
+addons:
+  istioOscalController:
+    enabled: true
