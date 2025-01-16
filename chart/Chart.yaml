@@ -4,3 +4,5 @@ description: A Helm chart for OSCAL Controller
 type: application
 version: 0.0.3-bb.0
 appVersion: "0.0.3"
+annotations:
+  bigbang.dev/maintenanceTrack: bb_maintained
