@@ -18,8 +18,8 @@ spec:
     spec:
       securityContext:
         runAsNonRoot: true
-        runAsUser: 1000
-        runAsGroup: 1000
+        runAsUser: 65532
+        runAsGroup: 65532
       serviceAccountName: {{ include "oscal-controller.fullname" . }}
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -34,8 +34,8 @@ spec:
             drop:
             - ALL
           runAsNonRoot: true
-          runAsUser: 1000
-          runAsGroup: 1000
+          runAsUser: 65532
+          runAsGroup: 65532
         ports:
         - containerPort: {{ .Values.service.port }}
         args:
