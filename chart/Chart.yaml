@@ -2,7 +2,7 @@ apiVersion: v2
 name: oscal-controller
 description: A Helm chart for OSCAL Controller
 type: application
-version: 0.0.3-bb.0
+version: 0.0.3-bb.1
 appVersion: "0.0.3"
 annotations:
   bigbang.dev/maintenanceTrack: bb_maintained
